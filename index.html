@@ -13,19 +13,22 @@
     --bg:#07070a;
     --card:rgba(255,255,255,0.04);
     --border:rgba(255,255,255,0.08);
-    --text:#ffffff;
     --muted:#b3b3b3;
   }
 
-  *{margin:0;padding:0;box-sizing:border-box;}
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
 
   body{
     font-family:Inter, sans-serif;
     background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
+    color:white;
   }
 
+  /* HERO */
   .hero{
     height:100vh;
     display:flex;
@@ -40,7 +43,7 @@
     position:absolute;
     width:600px;
     height:600px;
-    background:radial-gradient(circle, var(--accent) 0%, transparent 60%);
+    background:radial-gradient(circle, var(--accent), transparent 60%);
     opacity:0.25;
     filter:blur(120px);
     top:20%;
@@ -57,42 +60,16 @@
     color:var(--muted);
   }
 
-  .cta{
-    margin-top:25px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .btn{
-    padding:12px 18px;
-    border:1px solid var(--accent);
-    color:var(--accent);
-    text-decoration:none;
-    border-radius:10px;
-    transition:0.2s;
-    font-weight:600;
-    font-size:13px;
-  }
-
-  .btn:hover{
-    background:var(--accent);
-    color:black;
-    transform:scale(1.05);
-  }
-
   section{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
     padding:80px 20px;
   }
 
   h2{
-    font-size:18px;
+    color:var(--accent);
     letter-spacing:3px;
     margin-bottom:20px;
-    color:var(--accent);
   }
 
   .card{
@@ -109,31 +86,14 @@
     line-height:1.6;
   }
 
-  .stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-  }
-
-  .stat{
-    border:1px solid var(--accent);
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    background:rgba(233,57,142,0.05);
-  }
-
-  .stat h3{
-    color:var(--accent);
-    font-size:20px;
-  }
-
+  /* GRID (ACCOMPLISHMENTS) */
   .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
     gap:15px;
   }
 
+  /* SOCIALS */
   .socials a{
     display:inline-block;
     margin:6px;
@@ -151,11 +111,44 @@
     color:black;
   }
 
-  footer{
-    text-align:center;
-    padding:40px;
-    color:#444;
-    font-size:12px;
+  /* FORM */
+  form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+  }
+
+  input, textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #222;
+    background:#0c0c0f;
+    color:white;
+    outline:none;
+  }
+
+  textarea{
+    min-height:120px;
+    resize:none;
+  }
+
+  .btn{
+    display:inline-block;
+    padding:12px 18px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    background:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+  }
+
+  .btn:hover{
+    background:var(--accent);
+    color:black;
+    transform:scale(1.05);
   }
 
 </style>
@@ -169,16 +162,10 @@
 
   <h1>BRKZYY</h1>
   <div class="sub">Gaming • Streaming • Editing • Australia</div>
-
-  <div class="cta">
-    <a class="btn" href="#about">About</a>
-    <a class="btn" href="#content">Content</a>
-    <a class="btn" href="#contact">Contact</a>
-  </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about">
+<section>
   <h2>ABOUT</h2>
   <div class="card">
     <p>
@@ -187,67 +174,71 @@
       <br><br>
       Former member of Lucky7 (BO2 clan channel — 200K+ subscribers).
       <br><br>
-      His achievements include Fortnite Cash Cups during the 2020–2022 peak, a Duos Champion title in Fortnite Oceania servers,
-      Top 250 in Call of Duty Ranked, and #2 placement in Liberty Falls Zombies (Black Ops 6).
+      He has competed in Fortnite Cash Cups (2020–2022), reached Top 250 in Call of Duty Ranked,
+      and placed #2 in Liberty Falls Zombies (Black Ops 6).
       <br><br>
-      In 2026 he transitioned into Roblox content creation and rapidly grew across multiple platforms with millions of views.
+      In 2026 he transitioned into Roblox content creation and rapidly grew across multiple platforms.
     </p>
   </div>
 </section>
 
-<!-- STATS -->
+<!-- ACCOMPLISHMENTS -->
 <section>
-  <div class="stats">
-    <div class="stat">
-      <h3>200K+</h3>
-      <p>BO2 Clan Channel Legacy</p>
+  <h2>ACCOMPLISHMENTS</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3 style="color:#E9398E;">200K+</h3>
+      <p>Former BO2 Lucky7 clan channel (legacy audience)</p>
     </div>
-    <div class="stat">
-      <h3>Top 250</h3>
-      <p>Call of Duty Ranked</p>
+
+    <div class="card">
+      <h3 style="color:#E9398E;">Top 250</h3>
+      <p>Call of Duty Ranked competitive placement</p>
     </div>
-    <div class="stat">
-      <h3>Millions</h3>
-      <p>Across All Platforms</p>
+
+    <div class="card">
+      <h3 style="color:#E9398E;">OCE Champion</h3>
+      <p>Fortnite Duos competitive win (Oceania servers)</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:#E9398E;">Millions</h3>
+      <p>Views across all platforms</p>
     </div>
   </div>
 </section>
 
-<!-- CONTENT -->
-<section id="content">
-  <h2>CONTENT</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 style="color:var(--accent)">Gaming</h3>
-      <p>Call of Duty, GTA, Roblox gameplay & highlights.</p>
-    </div>
-
-    <div class="card">
-      <h3 style="color:var(--accent)">Edits</h3>
-      <p>Fast-paced viral meme edits and clips.</p>
-    </div>
-
-    <div class="card">
-      <h3 style="color:var(--accent)">Skate</h3>
-      <p>Skate content and trickshot-style gameplay clips.</p>
-    </div>
+<!-- SOCIALS -->
+<section>
+  <h2>SOCIALS</h2>
+  <div class="socials">
+    <a href="https://youtube.com/@brkzyk?si=LNDt4Jj0AbkZbEfV&sub_confirmation=1" target="_blank">YouTube</a>
+    <a href="https://instagram.com/b.brkzyy" target="_blank">Instagram</a>
+    <a href="https://twitch.tv/Brkzyy" target="_blank">Twitch</a>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>CONNECT</h2>
+  <h2>CONTACT</h2>
 
-  <div class="socials">
-    <a href="https://youtube.com/@brkzyyau?si=LNDt4Jj0AbkZbEfV&sub_confirmation=1">YouTube</a>
-    <a href="https://instagram.com/b.brkzyy">Instagram</a>
-    <a href="https://twitch.tv/Brkzyy">Twitch</a>
+  <div class="card">
+    <p>For business enquiries, sponsorships or collaborations:</p>
+
+    <form action="https://formspree.io/f/mvznblwv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:10px;font-size:12px;">
+      contact@brkzyy.com
+    </p>
   </div>
 </section>
-
-<footer>
-  © BRKZYY • fr reading this?
-</footer>
 
 </body>
 </html>

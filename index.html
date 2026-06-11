@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRKZYY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --accent:#E9398E;
+    --bg:#07070a;
+    --card:rgba(255,255,255,0.04);
+    --border:rgba(255,255,255,0.08);
+    --text:#ffffff;
+    --muted:#b3b3b3;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family:Inter, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+  }
+
+  .hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+  }
+
+  .glow{
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle, var(--accent) 0%, transparent 60%);
+    opacity:0.25;
+    filter:blur(120px);
+    top:20%;
+  }
+
+  h1{
+    font-size:90px;
+    letter-spacing:6px;
+    font-weight:800;
+  }
+
+  .sub{
+    margin-top:10px;
+    color:var(--muted);
+  }
+
+  .cta{
+    margin-top:25px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .btn{
+    padding:12px 18px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.2s;
+    font-weight:600;
+    font-size:13px;
+  }
+
+  .btn:hover{
+    background:var(--accent);
+    color:black;
+    transform:scale(1.05);
+  }
+
+  section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+  }
+
+  h2{
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    color:var(--accent);
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:14px;
+    backdrop-filter:blur(10px);
+  }
+
+  p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+  }
+
+  .stat{
+    border:1px solid var(--accent);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    background:rgba(233,57,142,0.05);
+  }
+
+  .stat h3{
+    color:var(--accent);
+    font-size:20px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+  }
+
+  .socials a{
+    display:inline-block;
+    margin:6px;
+    padding:10px 14px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.2s;
+    font-size:13px;
+  }
+
+  .socials a:hover{
+    background:var(--accent);
+    color:black;
+  }
+
+  footer{
+    text-align:center;
+    padding:40px;
+    color:#444;
+    font-size:12px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="glow"></div>
+
+  <h1>BRKZYY</h1>
+  <div class="sub">Gaming • Streaming • Editing • Australia</div>
+
+  <div class="cta">
+    <a class="btn" href="#about">About</a>
+    <a class="btn" href="#content">Content</a>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>ABOUT</h2>
+  <div class="card">
+    <p>
+      Brkzyy (Blake Brooks) is a 23-year-old gamer, streamer and designer from Melbourne, Victoria.
+      He creates content across Call of Duty, GTA and Roblox.
+      <br><br>
+      Former member of Lucky7 (BO2 clan channel — 200K+ subscribers).
+      <br><br>
+      His achievements include Fortnite Cash Cups during the 2020–2022 peak, a Duos Champion title in Fortnite Oceania servers,
+      Top 250 in Call of Duty Ranked, and #2 placement in Liberty Falls Zombies (Black Ops 6).
+      <br><br>
+      In 2026 he transitioned into Roblox content creation and rapidly grew across multiple platforms with millions of views.
+    </p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="stats">
+    <div class="stat">
+      <h3>200K+</h3>
+      <p>BO2 Clan Channel Legacy</p>
+    </div>
+    <div class="stat">
+      <h3>Top 250</h3>
+      <p>Call of Duty Ranked</p>
+    </div>
+    <div class="stat">
+      <h3>Millions</h3>
+      <p>Across All Platforms</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section id="content">
+  <h2>CONTENT</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 style="color:var(--accent)">Gaming</h3>
+      <p>Call of Duty, GTA, Roblox gameplay & highlights.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--accent)">Edits</h3>
+      <p>Fast-paced viral meme edits and clips.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--accent)">Skate</h3>
+      <p>Skate content and trickshot-style gameplay clips.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>CONNECT</h2>
+
+  <div class="socials">
+    <a href="https://youtube.com/@brkzyyau?si=LNDt4Jj0AbkZbEfV&sub_confirmation=1">YouTube</a>
+    <a href="https://instagram.com/b.brkzyy">Instagram</a>
+    <a href="https://twitch.tv/Brkzyy">Twitch</a>
+  </div>
+</section>
+
+<footer>
+  © BRKZYY • fr reading this?
+</footer>
+
+</body>
+</html>
